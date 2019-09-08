@@ -47,14 +47,14 @@ social_media:
   # youtube: your_username
 
 topics:
-  - name: Analytics
+  - name: Traveling
     #web_url: https://github.com/topics/css
-    image_url: https://activegrowth.com/wp-content/uploads/2017/05/ga-alternatives-featured-2.png
+    image_url: https://www.freeiconspng.com/uploads/travel-icon-png-25.jpg
 
-  - name: Machine Learning
+  - name: Video Games
     #web_url: https://github.com/topics/css  
-    image_url: https://cdn2.iconfinder.com/data/icons/artificial-intelligence-ai-color/64/diagram-deep-learning-machine-network-nural-512.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Video-Game-Controller-Icon.svg/1024px-Video-Game-Controller-Icon.svg.png
     
-  - name: Artificial Intelligence
+  - name: Fitness
     #web_url: https://github.com/topics/sass
-    image_url: https://image.flaticon.com/icons/png/512/328/328201.png
+    image_url: https://www.pngfind.com/pngs/m/61-617798_health-fitness-icon-healthy-food-icon-png-transparent.png
