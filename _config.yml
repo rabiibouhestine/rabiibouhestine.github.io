@@ -49,10 +49,10 @@ social_media:
 topics:
   - name: Data Analytics
     #web_url: https://github.com/topics/css
-    image_url: /assets/skill_data_analytics.png
+    image_url: /rabiibouhestine.github.io/assets/skill_data_analytics.png
 
   - name: Machine Learning
-    image_url: /assets/skill_machine_learning.png
+    image_url: /rabiibouhestine.github.io/assets/skill_machine_learning.png
     
   - name: Artificial Intelligence
-    image_url: /assets/skill_artificial_intelligence.png
+    image_url: /rabiibouhestine.github.io/assets/skill_artificial_intelligence.png
