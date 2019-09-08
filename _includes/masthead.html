@@ -28,14 +28,6 @@
         </a>
       </div>
     {% endif %}
-    {% if user.linkedin %}
-      <div class="{{ metadata_styles }}">
-        {% octicon linkedin height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Linkedin %}
-        <a href="https://linkedin.com/in/{{ user.linkedin }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
-          Linkedin/in/{{ user.linkedin }}
-        </a>
-      </div>
-    {% endif %}
     {% if user.location %}
       <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
         {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
