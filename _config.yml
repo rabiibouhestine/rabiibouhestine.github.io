@@ -47,14 +47,14 @@ social_media:
   # youtube: your_username
 
 topics:
-  - name: Resume
+  - name: My Resume
     web_url: https://rabiibouhestine.github.io/test/
     image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/resumeIcon.png
 
-  - name: Linkedin
+  - name: My Linkedin
     web_url: https://www.linkedin.com/in/rabiibouhestine
     image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/linkedinIcon.png
     
-  - name: Kaggle
+  - name: My Kaggle
     web_url: https://www.kaggle.com/rabii1992
     image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/kaggleIcon.png
