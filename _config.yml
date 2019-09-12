@@ -48,7 +48,7 @@ social_media:
 
 topics:
   - name: Data Analytics
-    web_url: https://rabiibouhestine.github.io/test/
+    #web_url: https://rabiibouhestine.github.io/test/
     image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/DA.png
 
   - name: Machine Learning
