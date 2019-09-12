@@ -47,12 +47,14 @@ social_media:
   # youtube: your_username
 
 topics:
-  - name: Data Analytics
-    #web_url: https://rabiibouhestine.github.io/test/
-    image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/DA.png
+  - name: Resume
+    web_url: https://rabiibouhestine.github.io/test/
+    image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/resumeIcon.png
 
-  - name: Machine Learning
-    image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/ML.png
+  - name: Linkedin
+    web_url: https://www.linkedin.com/in/rabiibouhestine
+    image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/linkedinIcon.png
     
-  - name: Artificial Intelligence
-    image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/AI.png
+  - name: Kaggle
+    web_url: https://www.kaggle.com/rabii1992
+    image_url: https://raw.githubusercontent.com/rabiibouhestine/rabiibouhestine.github.io/master/assets/kaggleIcon.png
