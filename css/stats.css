@@ -1,0 +1,30 @@
+
+#our-stats .h1{
+    color: #007b5e!important;
+}
+
+#our-stats a{
+    color: #000!important;
+    text-decoration:none;
+}
+#our-stats i{
+    color: #3498db!important;
+}
+
+#our-stats .counter {
+    background-color: #f2f2f5;
+    padding: 35px 0;
+	border: 1px solid #dcd9d9;
+    border-radius: 5px;
+}
+
+#our-stats .counter i,
+#our-stats .counter .count-title{
+	color: #74808a;
+    margin-bottom: 15px;
+}
+
+#our-stats .count-text {
+    color: #374054;
+	font-size: 1.2em;
+}

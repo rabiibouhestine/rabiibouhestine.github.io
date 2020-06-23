@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+	<link href="css/quote.css" rel="stylesheet">
+	<link href="css/stats.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,6 +38,9 @@
             <li>
                 <a href="#projects">Projects</a>
             </li>
+			<li>
+                <a href="#education">Statistics</a>
+            </li>
             <li>
                 <a href="#contact">Contact</a>
             </li>
@@ -46,12 +51,16 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Rabii Bouhestine</h1>
-            <h2>Data Analyst</h2>
-            <a href="cvRabiiBouhestineEN.pdf" download="cvRabiiBouhestineEN.pdf" class="btn-rounded-white">Download Resume</a>
-			<h4 style="color:white;">
-            I enjoy making data tell interesting stories and uncover insights with real world implications. <br />
-			I have always been driven by curiosity, thus my passion for data science, the art of extracting information and knowledge in a world full of data.
-			</h4>
+            <h2>Business Intelligence/Data Analyst</h2>
+			<blockquote class="quote-card">
+              <p>
+                You can have data without information, but you cannot have information without data.
+              </p>
+              <cite>
+                Daniel Keys Moran
+              </cite>
+            </blockquote>
+			<a href="cvRabiiBouhestineEN.pdf" download="cvRabiiBouhestineEN.pdf" class="btn-rounded-white"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a>
         </div>
         <!-- End #lead-content -->
 
@@ -106,26 +115,42 @@
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
-        <ul>
+		
+		<div class="row">
+		
+		<div class="col-sm-6">
+		<h3><i class="fa fa-bar-chart"></i> Analytics</h3>
+		<ul>
 			<li>Feature Engineering</li>
 			<li>Regression</li>
 			<li>Classification</li> 
 			<li>Clustering</li>
 			<li>Anomaly Detection</li>
-			<li>Deep Learning</li>
 			<li>Data cleaning</li>
 			<li>Data visualization,</li> 
 			<li>Exploratory data analysis</li> 
 			<li>Hypothesis Testing</li>
 			<li>A/B Testing</li>
+        </ul>
+		</div>
+		
+		<div class="col-sm-6">
+		<h3><i class="fa fa-laptop"></i> Software</h3>
+		<ul>
+			<li>Tableau</li>
+			<li>Power BI</li>
+			<li>R Shiny</li>
 			<li>SQL</li>
 			<li>Python (Scikit-learn, Numpy, Pandas,..)</li>
 			<li>R (data.table, caret, shiny, ggplot2,..)</li>
-			<li>Tableau</li>
 			<li>Git</li>
 			<li>MySQL</li>
 			<li>MS Office</li>
         </ul>
+		</div>
+		
+		</div>
+        
     </div>
     <!-- End #skills -->
 
@@ -170,6 +195,45 @@
         </div>
     </div>
     <!-- End #projects -->
+	
+
+	<div id="education">
+		<h2 class="heading">Statistics</h2>
+		<section id="our-stats">
+			<div class="row text-center">
+				<div class="col-sm-2 col-sm-offset-2">
+					<div class="counter">
+						<i class="fa fa-lightbulb-o fa-3x"></i>
+						<h2 class="timer count-title count-number">150+</h2>
+						<p class="count-text ">Projects</p>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="counter">
+						<i class="fa fa-briefcase fa-3x"></i>
+						<h2 class="timer count-title count-number">800+</h2>
+						<p class="count-text ">Hours of Work</p>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="counter">
+						<i class="fa fa-file-code-o fa-3x"></i>
+						<h2 class="timer count-title count-number">100,000+</h2>
+						<p class="count-text ">Lines of Code</p>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="counter">
+						<i class="fa fa-book fa-3x"></i>
+						<h2 class="timer count-title count-number">400+</h2>
+						<p class="count-text ">Courses</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+    
+    <!-- End #stats -->
 
     <div id="contact">
         <h2>Get in Touch</h2>
