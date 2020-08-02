@@ -1,310 +1,43 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+---
+layout: splash
+header:
+  overlay_image: /assets/images/analysis.png
+  overlay_filter: rgba(0, 146, 202, 0.8)
+  actions:
+    - label: "<i class='fas fa-download'></i> Download Resume"
+      url: "cvRabiiBouhestineEN.pdf"
+excerpt: "Data Analyst - Business Intelligence<br>
+<small>
+<a href='https://linkedin.com/in/rabiibouhestine/' target='_blank'><i class='fab fa-fw fa-linkedin' aria-hidden='true'></i></a>
+<a href='https://github.com/rabiibouhestine' target='_blank'><i class='fab fa-fw fa-github' aria-hidden='true'></i></a>
+<a href='mailto:rabiibouhestine@outlook.com'><i class='fas fa-fw fa-envelope-square' aria-hidden='true'></i></a>
+</small>"
+introduction:
+  - image_path: /assets/images/original.jpg
+    alt: "placeholder image"
+    title: "Hey There! Let me tell you about myself!"
+    excerpt: 'From a young age, I have loved numbers and knew that I wanted to make a career with them. 
+    I love the world of computer science but wanted to be able to work closely with people and solving 
+    everyday problems instead of just sitting in front of a screen all day. Becoming a data analyst gives 
+    me the chance to work with math and actually use it to find positive solutions.<br>
+    I would say that as a data analyst, I’m detail-oriented and accepting of the unknown. 
+    I am driven by my curiosity and love exploring, this helped me go through a lot of challenges 
+    and reveal well hidden answers within otherwise complicated data. I’m also a lifelong learner, 
+    always seeking out the latest Data Analytics tools and techniques. I frequently make suggestions 
+    to management about improvements and changes as my motivation comes from making a meaningful contribution. '
+    url: "/about"
+    btn_label: "Read More About Me!"
+    btn_class: "btn--primary" 
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rabii Bouhestine</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-	<link href="css/quote.css" rel="stylesheet">
-	<link href="css/stats.css" rel="stylesheet">
-</head>
+{% include feature_row id="introduction" type="left" %}
 
-<body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>			
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-			<li>
-                <a href="#education">Statistics</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
+<figure class="third">
+    <a href="/projects"><img src="/assets/images/my-projects.png"></a>
+    <a href="/posts"><img src="/assets/images/my-posts.png"></a>
+    <a href="/resources"><img src="/assets/images/my-wisdom.png"></a>
+</figure>
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Rabii Bouhestine</h1>
-            <h2>Data Analyst - Business Intelligence</h2>
-			<blockquote class="quote-card">
-              <p>
-                You can have data without information, but you cannot have information without data.
-              </p>
-              <cite>
-                Daniel Keys Moran
-              </cite>
-            </blockquote>
-			<a href="cvRabiiBouhestineEN.pdf" download="cvRabiiBouhestineEN.pdf" class="btn-rounded-white"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a>
-        </div>
-        <!-- End #lead-content -->
 
-        <div id="lead-overlay"></div>
 
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
 
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-		
-            <div data-date="July 2018 – To date">
-                <h3><a href="https://d-aim.com/" target="_blank">D-AIM</a></h3>
-                <h4>Data Analyst - Business Intelligence</h4>
-				<p>
-					Designed, developed and deployed a Business Intelligence platform having over 120 reporting dashboards, allowing a client in the teleco industry to precisely measure their performance.
-					</br>
-					Analysed customers behaviour to improve marketing campaigns, increasing revenue by 7%.
-					</br>
-					Communicated and presented insights to clients and cross functional teams of the organisation.
-					</br>
-					Automated all Data Quality Excel reports by using an R program, saving over 12 man-hours weekly.
-					</br>
-					Trained 3 coworkers to use the R package ’R Shiny’ as an Excel alternative for reporting purposes.
-				</p>
-            </div>
-
-            <div data-date="January 2018 – June 2018">
-                <h3><a href="https://quantylix.com/" target="_blank">QUANTYLIX</a></h3>
-                <h4>Data Analyst</h4>
-                <p>
-					Scraped the betting odds, offered by Pinnacle’s API, of over 3000 Football games into MySQL.
-					</br>
-					Transformed the collected data into a record per game dataset having 150 engineered features.
-					</br>
-					Implemented a Machine Learning model, by combining the Logistic Regression and Random Forest algorithms, that was able to forecast betting odds of Pinnacle’s Football games with 82% accuracy.
-                </p>
-            </div>
-
-            <div data-date="June 2017 – August 2017">
-                <h3><a href="" target="_blank">INSIGHT PLUS</a></h3>
-                <h4>Data Visualisation Intern</h4>
-                <p>
-					Revamped the data visualisation process in a web page, which reduced the loading time by 50%.
-					</br>
-					Developed 2 CRM reporting dashboards as Odoo modules using Python, XML and Javascript.
-                </p>
-            </div>
-			
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-		
-		<div class="row">
-		
-		<div class="col-sm-6">
-		<h3><i class="fa fa-bar-chart"></i> Analytics</h3>
-		<ul>
-			<li>Data Cleaning</li>
-			<li>Data Visualization</li>			
-			<li>Hypothesis Testing</li> 			
-			<li>Exploratory Data Analysis</li>			
-			<li>A/B Testing</li>			
-			<li>Data Mining</li>			
-			<li>Reporting</li> 
-        </ul>
-		</div>
-		
-		<div class="col-sm-6">
-		<h3><i class="fa fa-laptop"></i> Software</h3>
-		<ul>
-			<li>SQL</li>
-			<li>Python</li>
-			<li>R</li>
-			<li>SAS</li>
-			<li>Git</li>
-			<li>Google Cloud</li>
-        </ul>
-		<ul>
-			<li>R Shiny</li>
-			<li>Tableau</li>
-			<li>Power BI</li>
-			<li>Excel</li>
-			<li>MySQL</li>
-			<li>Oracle</li>
-        </ul>
-		</div>
-		
-		</div>
-        
-    </div>
-    <!-- End #skills -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-			
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/virus.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Corona Virus Disease (COVID-19) Dashboard</h3>
-                        <p>
-                            Visualised the worldwide situation of Covid-19 using Tableau and aggregated data provided by Johns Hopkins University.
-						</p>
-                        <a href="https://rabiibouhestine.github.io/covid19" target="_blank">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/happy.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>World Happiness Report (2020) Dashboard</h3>
-                        <p>
-                            Analysed the data provided by the World Happiness Report using Tableau to see the impact of 6 factors on the happiness score.
-						</p>
-                        <a href="https://rabiibouhestine.github.io/happiness" target="_blank">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-				
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/twitter.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Twitter Analysis (NLP Web Application)</h3>
-                        <p>
-                            Developed an R Shiny application that allows users to generate 2 NLP reports describing a Twitter account or a hashtag.
-						</p>
-                        <a href="https://rabiibouhestine.github.io/twitterApp" target="_blank">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-				
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-	
-
-	<div id="education">
-		<h2 class="heading">Statistics</h2>
-		<section id="our-stats">
-			<div class="row text-center">
-				<div class="col-sm-2 col-sm-offset-2">
-					<div class="counter">
-						<i class="fa fa-magic fa-3x"></i>
-						<h2 class="timer count-title count-number">150+</h2>
-						<p class="count-text ">Projects</p>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div class="counter">
-						<i class="fa fa-bar-chart fa-3x"></i>
-						<h2 class="timer count-title count-number">300+</h2>
-						<p class="count-text ">Dashboards</p>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div class="counter">
-						<i class="fa fa-file-code-o fa-3x"></i>
-						<h2 class="timer count-title count-number">100,000+</h2>
-						<p class="count-text ">Lines of Code</p>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div class="counter">
-						<i class="fa fa-book fa-3x"></i>
-						<h2 class="timer count-title count-number">400+</h2>
-						<p class="count-text ">Courses</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-    
-    <!-- End #stats -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/rabiibouhestine@outlook.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2020 Rabii Bouhestine
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/rabiibouhestine" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/rabiibouhestine/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-</body>
-
-</html>
