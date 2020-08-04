@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Corona Virus Disease (COVID-19) Dashboard",
-        "excerpt":"               Comments               ","categories": [],
+        "excerpt":"               Comments                ","categories": [],
         "tags": [],
         "url": "https://rabiibouhestine.github.io//covid19",
         "teaser": "https://rabiibouhestine.github.io//assets/images/flu.jpg"
