@@ -1,0 +1,527 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Scraping UFO sightings data with R - Rabii Bouhestine</title>
+<meta name="description" content="The National UFO Reporting Center (NUFORC) is dedicated to the collection and dissemination of objective UFO Data. It has a rich archive of reported UFO sightings going back to the 14th century, but this data is provided as tables in web pages, which is not downloadable.">
+
+
+  <meta name="author" content="Rabii Bouhestine">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Rabii Bouhestine">
+<meta property="og:title" content="Scraping UFO sightings data with R">
+<meta property="og:url" content="https://rabiibouhestine.github.io//ufo_sightings/">
+
+
+  <meta property="og:description" content="The National UFO Reporting Center (NUFORC) is dedicated to the collection and dissemination of objective UFO Data. It has a rich archive of reported UFO sightings going back to the 14th century, but this data is provided as tables in web pages, which is not downloadable.">
+
+
+
+  <meta property="og:image" content="https://rabiibouhestine.github.io//assets/images/ufo/ufo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-08-06T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://rabiibouhestine.github.io//ufo_sightings/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Rabii Bouhestine",
+      "url": "https://rabiibouhestine.github.io//"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Rabii Bouhestine Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Rabii Bouhestine
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" title="Check out my home page!">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/" title="What I do when I feel productive!">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" title="Check out what I write about.. Stuff!">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/resources/" title="Learn everything about Data Science!">Resources</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" title="Learn more about me!">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 146, 202, 0.4), rgba(0, 146, 202, 0.4)), url('/assets/images/ufo/ufo.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Scraping UFO sightings data with R
+
+        
+      </h1>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/cropped.jpg" alt="Rabii Bouhestine" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Rabii Bouhestine</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Data Analyst - Business Intelligence</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">El Mourouj 5, Ben Arous, Tunisia</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://rabiibouhestine.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">rabiibouhestine.github.io</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/rabiibouhestine" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">github.com/rabiibouhestine</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/rabiibouhestine/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">linkedin.com/in/rabiibouhestine</span></a></li>
+          
+        
+          
+            <li><a href="mailto:rabiibouhestine@outlook.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">rabiibouhestine@outlook.com</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Scraping UFO sightings data with R">
+    <meta itemprop="description" content="The National UFO Reporting Center (NUFORC) is dedicated to the collection and dissemination of objective UFO Data.It has a rich archive of reported UFO sightings going back to the 14th century, but this data is provided as tables in web pages, which is not downloadable.">
+    <meta itemprop="datePublished" content="2020-08-06T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="http://www.nuforc.org/">The National UFO Reporting Center (NUFORC)</a> is dedicated to the collection and dissemination of objective UFO Data.
+It has a rich archive of reported UFO sightings going back to the 14th century, but this data is provided as tables in web pages, which is not downloadable.</p>
+
+<p><img src="/assets/images/ufo/ufo_database.png" alt="" /></p>
+
+<p>The NUFORC ‘<a href="http://www.nuforc.org/webreports.html">Online Database</a>’ allows to browse the UFO sightings reports per event date, which is a simple <a href="http://www.nuforc.org/webreports/ndxevent.html">html table</a> thats shows the number of reported sightings for each month.</p>
+
+<p><img src="/assets/images/ufo/ufo_page_months.png" alt="" /></p>
+
+<p>Each month in the table is a hyperlink that points to <a href="http://www.nuforc.org/webreports/ndxe202007.html">another page</a> that also has a simple html table with all the details of the UFO sightings that were reported for that month.</p>
+
+<p><img src="/assets/images/ufo/ufo_month_details.png" alt="" /></p>
+
+<p>At first, I thought that I would have to scrape the first table (the table that has the count per month), extract the link in each hyperlink, then scrape that link (which is totally feasible).<br />
+But then I realised it can be even easier than that. I realised that the hyperlink always has the same structure: <code class="language-plaintext highlighter-rouge">http://www.nuforc.org/webreports/ndxe</code> + <code class="language-plaintext highlighter-rouge">&lt;year&gt;</code> + <code class="language-plaintext highlighter-rouge">&lt;month&gt;</code> + <code class="language-plaintext highlighter-rouge">.html</code><br />
+Example: for July 2020, the links is: <code class="language-plaintext highlighter-rouge">http://www.nuforc.org/webreports/ndxe202007.html</code></p>
+
+<p>With that in my mind, I fired up my favou<strong>R</strong>ite tool and started doing some good old scraping!</p>
+
+<p>I use the library XML for web scraping and data.table and lubridate for data manipulation.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>library<span class="o">(</span>XML<span class="o">)</span>
+library<span class="o">(</span>data.table<span class="o">)</span>
+library<span class="o">(</span>lubridate<span class="o">)</span>
+</code></pre></div></div>
+<p>The first thing I did was to create a list of the months that I wanted to extract the data from, this being the months between 1990 and 2020, this time period can be easily changed to your likng.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>months_list <span class="o">=</span> paste0<span class="o">(</span><span class="nb">sort</span><span class="o">(</span>rep<span class="o">(</span><span class="nb">seq</span><span class="o">(</span>1990,2020<span class="o">)</span>,12<span class="o">))</span>, sprintf<span class="o">(</span><span class="s2">"%02d"</span>, rep<span class="o">(</span><span class="nb">seq</span><span class="o">(</span>1,12<span class="o">)</span>,31<span class="o">)))</span>
+months_list <span class="o">=</span> months_list[-c<span class="o">(</span>368:372<span class="o">)]</span>
+</code></pre></div></div>
+
+<p>This list allowed me to generate all the links that I needed to scrape ufo sightings data from.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufo_dates_url <span class="o">=</span> paste0<span class="o">(</span><span class="s2">"http://www.nuforc.org/webreports/ndxe"</span>,months_list,<span class="s2">".html"</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>Then I just used a for loop to go through all the links one by one, scrape the html table from each link, and then combine all tables together. This resulted in one big clean(ish) data table.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufo_global_table <span class="o">=</span> data.frame<span class="o">()</span>
+
+<span class="k">for</span><span class="o">(</span>ufo_url <span class="k">in </span>ufo_dates_url<span class="o">){</span>
+
+  ufo_url_read &lt;- readLines<span class="o">(</span>ufo_url, encoding <span class="o">=</span> <span class="s2">"UTF-8"</span><span class="o">)</span>
+  ufo_url_parsed &lt;- htmlParse<span class="o">(</span>ufo_url_read, encoding <span class="o">=</span> <span class="s2">"UTF-8"</span><span class="o">)</span>
+  ufo_url_table &lt;- readHTMLTable<span class="o">(</span>ufo_url_parsed, stringsAsFactors <span class="o">=</span> FALSE<span class="o">)</span>
+  ufo_url_table &lt;- as.data.table<span class="o">(</span>ufo_url_table<span class="o">)</span>
+  ufo_global_table &lt;- rbind<span class="o">(</span>ufo_global_table, ufo_url_table<span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>You can use this table in many ways. I was particularly interested in the distribution of the shapes recorded in all of theses UFO sightings reports, and their evolution over the years.</p>
+
+<p>In a first step, I changed the names of the columns to remove a ‘NULL.’ string, then I added a clean Date and Month columns and sorted the data in a way that makes it easier to reshape.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>names<span class="o">(</span>ufo_global_table<span class="o">)</span> <span class="o">=</span> gsub<span class="o">(</span><span class="s1">'NULL.'</span>,<span class="s1">''</span>,names<span class="o">(</span>ufo_global_table<span class="o">))</span>
+ufo_global_table &lt;- ufo_global_table[, Date:<span class="o">=</span>as.Date<span class="o">(</span>Date...Time, <span class="s2">"%m/%d/%y"</span><span class="o">)]</span>
+ufo_global_table &lt;- ufo_global_table[, Month:<span class="o">=</span>paste0<span class="o">(</span>year<span class="o">(</span>Date<span class="o">)</span>,<span class="s1">'/'</span>,sprintf<span class="o">(</span><span class="s2">"%02d"</span>, month<span class="o">(</span>Date<span class="o">)))]</span>
+ufo_global_table &lt;- ufo_global_table[order<span class="o">(</span>Shape, year<span class="o">(</span>Date<span class="o">)</span>, month<span class="o">(</span>Date<span class="o">))]</span>
+</code></pre></div></div>
+<p>Finally, I aggregated the data to find the count of UFO sightings reported for each month from 1990 to 2020, grouped by their shape. After that I reshaped the table to make it easier to visualise with <a href="https://flourish.studio/">Flourish Studio</a>. This allowed me to make the nice animated bar chart race below.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufo_global_table_shapes &lt;- ufo_global_table[, list<span class="o">(</span><span class="nv">count</span><span class="o">=</span>.N<span class="o">)</span>, by <span class="o">=</span> c<span class="o">(</span><span class="s1">'Month'</span>,<span class="s1">'Shape'</span><span class="o">)]</span>
+ufo_global_table_shapes &lt;- dcast<span class="o">(</span>ufo_global_table_shapes, Shape~Month, value.var<span class="o">=</span><span class="s1">'count'</span>, <span class="nv">fill</span><span class="o">=</span>0<span class="o">)</span>
+ufo_global_table_shapes &lt;- ufo_global_table_shapes[,as.list<span class="o">(</span>cumsum<span class="o">(</span>unlist<span class="o">(</span>.SD<span class="o">)))</span>, by <span class="o">=</span> c<span class="o">(</span><span class="s1">'Shape'</span><span class="o">)]</span>
+</code></pre></div></div>
+
+<iframe src="https://flo.uri.sh/visualisation/3392956/embed" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-08-06T00:00:00+01:00">August 6, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+            
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/rabiibouhestine" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/rabiibouhestine/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Rabii Bouhestine. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-174467806-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://rabiibouhestine.github.io//ufo_sightings/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/ufo_sightings"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://rabiibouhestine.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
