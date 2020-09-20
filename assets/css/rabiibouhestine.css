@@ -13,8 +13,8 @@
     text-decoration: none !important;
 }
 
-.social-icons .fa-github, .social-icons .fa-github-alt, 
-.social-icons .fa-github-square, .social-icons .fa-linkedin, 
-.social-icons .fa-linkedin-in,.social-icons .fa-rss, .social-icons .fa-rss-square {
+.page__footer-follow .social-icons .fa-github, .page__footer-follow .social-icons .fa-github-alt, 
+.page__footer-follow .social-icons .fa-github-square, .page__footer-follow .social-icons .fa-linkedin, 
+.page__footer-follow .social-icons .fa-linkedin-in, .page__footer-follow .social-icons .fa-rss, .page__footer-follow .social-icons .fa-rss-square {
     color: white !important;
 }
