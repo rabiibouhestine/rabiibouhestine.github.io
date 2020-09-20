@@ -1,0 +1,20 @@
+.more-apps{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 4px;
+    text-align: center;
+    z-index: 99999;
+    background: rgba(0,0,0,0.8);
+    font-size: 18px;
+    color: #fff;
+}
+.more-apps a{
+    text-decoration: none !important;
+}
+
+.social-icons .fa-github, .social-icons .fa-github-alt, 
+.social-icons .fa-github-square, .social-icons .fa-linkedin, 
+.social-icons .fa-linkedin-in,.social-icons .fa-rss, .social-icons .fa-rss-square {
+    color: white !important;
+}

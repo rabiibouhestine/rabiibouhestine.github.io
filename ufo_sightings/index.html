@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
-  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -14,20 +14,23 @@
 
 
   <meta name="author" content="Rabii Bouhestine">
+  
+  <meta property="article:author" content="Rabii Bouhestine">
+  
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Rabii Bouhestine">
 <meta property="og:title" content="Scraping UFO sightings data with R">
-<meta property="og:url" content="https://rabiibouhestine.github.io//ufo_sightings/">
+<meta property="og:url" content="http://localhost:4000/ufo_sightings/">
 
 
   <meta property="og:description" content="The National UFO Reporting Center (NUFORC) is dedicated to the collection and dissemination of objective UFO Data. It has a rich archive of reported UFO sightings going back to the 14th century, but this data is provided as tables in web pages, which is not downloadable.">
 
 
 
-  <meta property="og:image" content="https://rabiibouhestine.github.io//assets/images/ufo/ufo.jpg">
+  <meta property="og:image" content="http://localhost:4000/assets/images/ufo/ufo.jpg">
 
 
 
@@ -44,7 +47,7 @@
   
 
 
-<link rel="canonical" href="https://rabiibouhestine.github.io//ufo_sightings/">
+<link rel="canonical" href="http://localhost:4000/ufo_sightings/">
 
 
 
@@ -55,7 +58,7 @@
     
       "@type": "Person",
       "name": "Rabii Bouhestine",
-      "url": "https://rabiibouhestine.github.io//"
+      "url": "http://localhost:4000/"
     
   }
 </script>
@@ -81,6 +84,7 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/rabiibouhestine.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
 <!--[if IE]>
@@ -133,13 +137,13 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/" title="Check out my home page!">Home</a>
+              <a href="/" title="Home">Home</a>
             </li><li class="masthead__menu-item">
-              <a href="/projects/" title="What I do when I feel productive!">Projects</a>
+              <a href="/open-source/" title="My humble contributions to Open Source">Open Source</a>
+            </li><li class="masthead__menu-item">
+              <a href="/r-shiny/" title="Sample of my Open Sourced Shiny Apps">R Shiny</a>
             </li><li class="masthead__menu-item">
               <a href="/posts/" title="Check out what I write about.. Stuff!">Blog</a>
-            </li><li class="masthead__menu-item">
-              <a href="/resources/" title="Learn everything about Data Science!">Resources</a>
             </li><li class="masthead__menu-item">
               <a href="/about/" title="Learn more about me!">About</a>
             </li></ul>
@@ -178,15 +182,26 @@
       </h1>
       
       
-        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
+  <p class="page__meta">
+    
 
+    
 
-
-  2 minute read
-
-</p>
+    
       
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
       
       
     </div>
@@ -220,7 +235,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>Data Analyst - Business Intelligence</p>
+        <p>Data Scientist - R &amp; R Shiny Expert</p>
 
       </div>
     
@@ -238,7 +253,7 @@
       
         
           
-            <li><a href="https://rabiibouhestine.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">rabiibouhestine.github.io</span></a></li>
+            <li><a href="https://rabiibouhestine.com/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">rabiibouhestine.com</span></a></li>
           
         
           
@@ -397,6 +412,14 @@ ufo_global_table_shapes &lt;- ufo_global_table_shapes[,as.list<span class="o">(<
 
 <iframe src="https://flo.uri.sh/visualisation/3392956/embed" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>
 
+<div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
         
       </section>
 
@@ -415,15 +438,6 @@ ufo_global_table_shapes &lt;- ufo_global_table_shapes[,as.list<span class="o">(<
 
       
     </div>
-
-    
-      <div class="page__comments">
-  
-  
-      <h4 class="page__comments-title">Comments</h4>
-      <section id="disqus_thread"></section>
-    
-</div>
 
     
   </article>
@@ -457,11 +471,11 @@ ufo_global_table_shapes &lt;- ufo_global_table_shapes[,as.list<span class="o">(<
     
       
         
-          <li><a href="https://github.com/rabiibouhestine" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://github.com/rabiibouhestine" rel="nofollow noopener noreferrer"><i class="fab fa-github-square" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-          <li><a href="https://www.linkedin.com/in/rabiibouhestine/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+          <li><a href="https://www.linkedin.com/in/rabiibouhestine/" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
         
       
     
@@ -477,26 +491,7 @@ ufo_global_table_shapes &lt;- ufo_global_table_shapes[,as.list<span class="o">(<
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
-
-
-
-
-
-
-  <script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-174467806-1']);
-  
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 
 
@@ -506,7 +501,7 @@ ufo_global_table_shapes &lt;- ufo_global_table_shapes[,as.list<span class="o">(<
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://rabiibouhestine.github.io//ufo_sightings/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.url = "http://localhost:4000/ufo_sightings/";  /* Replace PAGE_URL with your page's canonical URL variable */
       this.page.identifier = "/ufo_sightings"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */

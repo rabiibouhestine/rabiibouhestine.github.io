@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
-  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.20.2 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
@@ -9,40 +9,41 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Check out what I write about.. Stuff! - Rabii Bouhestine</title>
-<meta name="description" content="My amazing website.">
+<!-- begin _includes/seo.html --><title>My BLog - Rabii Bouhestine</title>
+<meta name="description" content="My personal website.">
 
 
   <meta name="author" content="Rabii Bouhestine">
+  
 
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Rabii Bouhestine">
-<meta property="og:title" content="Check out what I write about.. Stuff!">
-<meta property="og:url" content="https://rabiibouhestine.github.io//posts/">
+<meta property="og:title" content="My BLog">
+<meta property="og:url" content="http://localhost:4000/posts/">
 
 
-  <meta property="og:description" content="My amazing website.">
-
-
-
-  <meta property="og:image" content="https://rabiibouhestine.github.io//assets/images/analysis.png">
+  <meta property="og:description" content="My personal website.">
 
 
 
+  <meta property="og:image" content="http://localhost:4000/assets/images/analysis.png">
 
 
 
 
 
 
-  
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://rabiibouhestine.github.io//posts/">
+
+<link rel="canonical" href="http://localhost:4000/posts/">
 
 
 
@@ -53,7 +54,7 @@
     
       "@type": "Person",
       "name": "Rabii Bouhestine",
-      "url": "https://rabiibouhestine.github.io//"
+      "url": "http://localhost:4000/"
     
   }
 </script>
@@ -79,6 +80,7 @@
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/rabiibouhestine.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
 
 <!--[if IE]>
@@ -131,13 +133,13 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/" title="Check out my home page!">Home</a>
+              <a href="/" title="Home">Home</a>
             </li><li class="masthead__menu-item">
-              <a href="/projects/" title="What I do when I feel productive!">Projects</a>
+              <a href="/open-source/" title="My humble contributions to Open Source">Open Source</a>
+            </li><li class="masthead__menu-item">
+              <a href="/r-shiny/" title="Sample of my Open Sourced Shiny Apps">R Shiny</a>
             </li><li class="masthead__menu-item">
               <a href="/posts/" title="Check out what I write about.. Stuff!">Blog</a>
-            </li><li class="masthead__menu-item">
-              <a href="/resources/" title="Learn everything about Data Science!">Resources</a>
             </li><li class="masthead__menu-item">
               <a href="/about/" title="Learn more about me!">About</a>
             </li></ul>
@@ -170,12 +172,14 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Check out what I write about.. Stuff!
+          My BLog
 
         
       </h1>
       
       
+
+
       
       
     </div>
@@ -209,7 +213,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>Data Analyst - Business Intelligence</p>
+        <p>Data Scientist - R &amp; R Shiny Expert</p>
 
       </div>
     
@@ -227,7 +231,7 @@
       
         
           
-            <li><a href="https://rabiibouhestine.github.io/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">rabiibouhestine.github.io</span></a></li>
+            <li><a href="https://rabiibouhestine.com/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">rabiibouhestine.com</span></a></li>
           
         
           
@@ -313,36 +317,44 @@
     
 
 
-<div class="entries-grid">
+
+<div class="entries-list">
   
 
 
 
 
 
-<div class="grid__item">
+<div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/ufo/ufo.jpg" alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/ufo_sightings/" rel="permalink">Scraping UFO sightings data with R
 </a>
       
     </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
-
-
-
-  2 minute read
-
-</p>
+  <p class="page__meta">
     
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
     <p class="archive__item-excerpt" itemprop="description">The National UFO Reporting Center (NUFORC) is dedicated to the collection and dissemination of objective UFO Data.
 It has a rich archive of reported UFO sigh...</p>
   </article>
@@ -368,11 +380,11 @@ It has a rich archive of reported UFO sigh...</p>
     
       
         
-          <li><a href="https://github.com/rabiibouhestine" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://github.com/rabiibouhestine" rel="nofollow noopener noreferrer"><i class="fab fa-github-square" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-          <li><a href="https://www.linkedin.com/in/rabiibouhestine/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+          <li><a href="https://www.linkedin.com/in/rabiibouhestine/" rel="nofollow noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
         
       
     
@@ -388,26 +400,7 @@ It has a rich archive of reported UFO sigh...</p>
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 
-
-
-
-
-
-
-  <script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-174467806-1']);
-  
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 
 
 

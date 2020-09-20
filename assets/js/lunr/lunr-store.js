@@ -2,24 +2,30 @@ var store = [{
         "title": "Scraping UFO sightings data with R",
         "excerpt":"The National UFO Reporting Center (NUFORC) is dedicated to the collection and dissemination of objective UFO Data. It has a rich archive of reported UFO sightings going back to the 14th century, but this data is provided as tables in web pages, which is not downloadable. The NUFORC ‘Online Database’...","categories": [],
         "tags": [],
-        "url": "https://rabiibouhestine.github.io//ufo_sightings/",
-        "teaser": "https://rabiibouhestine.github.io//assets/images/ufo/ufo.jpg"
+        "url": "http://localhost:4000/ufo_sightings/",
+        "teaser": "http://localhost:4000/assets/images/ufo/ufo.jpg"
       },{
-        "title": "Twitter Analysis (NLP Web Application)",
-        "excerpt":"               Comments               ","categories": [],
+        "title": "Covid19",
+        "excerpt":" ","categories": [],
         "tags": [],
-        "url": "https://rabiibouhestine.github.io//twitterApp",
-        "teaser": "https://rabiibouhestine.github.io//assets/images/twitter.jpg"
+        "url": "http://localhost:4000/covid19",
+        "teaser": null
       },{
         "title": "World Happiness Report (2020) Dashboard",
         "excerpt":"               Comments               ","categories": [],
         "tags": [],
-        "url": "https://rabiibouhestine.github.io//happiness",
-        "teaser": "https://rabiibouhestine.github.io//assets/images/happy.jpg"
+        "url": "http://localhost:4000/happiness",
+        "teaser": "http://localhost:4000/assets/images/happy.jpg"
       },{
-        "title": "Corona Virus Disease (COVID-19) Dashboard",
-        "excerpt":"               Comments                ","categories": [],
+        "title": "Rawg Demo",
+        "excerpt":" ","categories": [],
         "tags": [],
-        "url": "https://rabiibouhestine.github.io//covid19",
-        "teaser": "https://rabiibouhestine.github.io//assets/images/flu.jpg"
+        "url": "http://localhost:4000/rawg-demo",
+        "teaser": null
+      },{
+        "title": "Twitteranalysis",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/twitteranalysis",
+        "teaser": null
       }]
