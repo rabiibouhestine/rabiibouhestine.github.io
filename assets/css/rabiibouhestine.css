@@ -18,3 +18,11 @@
 .page__footer-follow .social-icons .fa-linkedin-in, .page__footer-follow .social-icons .fa-rss, .page__footer-follow .social-icons .fa-rss-square {
     color: white !important;
 }
+
+.wrapper{
+    text-align: center !important;
+}
+
+.page__hero--overlay .page__lead {
+    max-width: 100% !important;
+}
