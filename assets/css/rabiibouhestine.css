@@ -23,6 +23,18 @@
     text-align: center !important;
 }
 
+.page__footer{
+    text-align: center !important;
+}
+
 .page__hero--overlay .page__lead {
     max-width: 100% !important;
+}
+
+.site-logo img {
+    max-height: 2.5rem !important;
+}
+
+.masthead__inner-wrap {
+    padding: 0.2em !important;
 }
