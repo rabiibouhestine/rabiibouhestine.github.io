@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/covid19</loc>
-<lastmod>2020-10-12T17:58:21+01:00</lastmod>
+<lastmod>2020-10-13T11:09:41+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/happiness</loc>
@@ -14,11 +14,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/rawg-demo</loc>
-<lastmod>2020-10-12T17:58:21+01:00</lastmod>
+<lastmod>2020-10-13T11:09:41+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/ships</loc>
+<lastmod>2020-10-13T11:09:41+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/twitteranalysis</loc>
-<lastmod>2020-10-12T17:58:21+01:00</lastmod>
+<lastmod>2020-10-13T11:09:41+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -43,6 +47,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/_projects/rawg-demo/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/_projects/ships/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/_projects/twitteranalysis/</loc>

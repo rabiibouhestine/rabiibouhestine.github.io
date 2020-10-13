@@ -23,6 +23,12 @@ var store = [{
         "url": "http://localhost:4000/rawg-demo",
         "teaser": null
       },{
+        "title": "Ships",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/ships",
+        "teaser": null
+      },{
         "title": "Twitteranalysis",
         "excerpt":" ","categories": [],
         "tags": [],
